@@ -4,22 +4,30 @@
     <title>Dork and Goober</title>
 	<link rel="stylesheet" href="styles/styles.css" />
 	<script async src="./javascript/index.js"></script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
 
   </head>
+  
   <body>
   
-    <h1>Nothing suspicious here...</h1>
-	<h1>Just me loving you.</h1>
-    <h4 id='date'></h4>
+	<!-- Hover-able dropdown -->
 	
-	<!-- Just a typical nav-element with a list of links -->
-	<nav>
-		<a href="#Home">Home</a>
-		<a href="#Photos">Photos</a>
-		<a href="#Misc">Misc</a>
-
-	</nav>
-
+	<div class="dropdown" style="float:left;">
+		<button class="dropbutt">Dropdown</button>
+		<div class="dropdown-content">
+			<a href="#Home" type="button" >Home</a>
+			<a href="#Photos" type="button" >Photos</a>
+			<a href="#Misc" type="button" >Misc</a>
+		</div>
+	</div>
+	
+	<div class="w3-container w3-lobster">
+		<p class="w3-xxxlarge">Nothing suspicious here...</p>
+		<p class="w3-xxxlarge">Just me loving you.</p>
+		<p class="w3-xlarge" id='date'></p>
+	</div>
+		
 
 	<div id="Photos" class="page">
 		<div1 class="image-section">
