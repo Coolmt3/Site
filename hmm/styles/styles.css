@@ -127,3 +127,8 @@ div2 {
 .w3-lobster {
   font-family: "Lobster", serif;
 }
+
+img.resize {
+  max-width:50%;
+  max-height:50%;
+}
