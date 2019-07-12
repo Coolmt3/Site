@@ -21,27 +21,37 @@
 
   </head>
   
+  
   <body>
   
-	<!-- Hover-able dropdown -->
-	
-	<div class="dropdown" style="float:left;">
-		<button class="dropbutt">Hamburger</button>
-		<div class="dropdown-content">
-			<a href="#Home"  >Home</a>
-			<a href="#Photos"  >Photos</a>
-			<a href="#Misc"  >Misc</a>
-		</div>
+	<button class="header" id="myHeader" style="font-size:30px;cursor:pointer;float:left;background-color:#3971cc; border:none;" onmouseover="openNav()" onclick="openNav()">&#9776; Menu</button>
+  
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#Home"  >Home</a>
+		<a href="#Photos"  >Photos</a>
+		<a href="#Misc"  >Misc</a>
 	</div>
 	
-	<div class="w3-container w3-lobster">
-		<p class="w3-xxxlarge">Nothing suspicious here...</p>
-		<p class="w3-xxxlarge">Just me loving you.</p>
-		<p class="w3-xlarge" id='date'></p>
-	</div>
+	
+
+	
+	
+	
+	
+
+		
+		
+
+		
 		
 
 	<div id="Photos" class="page">
+	
+		<div class="w3-container w3-lobster">
+			<p class="w3-xxxlarge">This is us</p>
+		</div>
+	
 		<div1 class="image-section">
 			<div1 class="section-style">
 				<img class="resize" src="embridge.jpg" alt=""/>
@@ -66,10 +76,18 @@
 	</div>
 	
 	<div id="Misc" class="page">
-		[Coming soon!]
+		<div>
+			[Coming soon!]
+		</div>
 	</div>
 	
 	<div id="Home" class="page default">
+	
+		<div class="w3-container w3-lobster">
+			<p class="w3-xxxlarge">Nothing suspicious here...</p>
+			<p class="w3-xxxlarge">Just me loving you.</p>
+			<p class="w3-xlarge" id='date'></p>
+		</div>
 	
 		<div1 class="image-section">
 			<div1 class="section-style">
