@@ -27,67 +27,59 @@ function myFunction() {
   }
 }
 
-var btnSubscribe = document.getElementById("btnSubmitSubscribe");
 
-    btnSubscribe.addEventListener("click", function (evt) {
-
-        evt.preventDefault();
-
-        var subscribe = document.querySelector("[name=subscribe]");
-
-        console.log(subscribe.value); //writes 'newsletter'
-
-        return false;
-
-    });
-	
-function validateInterest(evt) {
-
-    evt.preventDefault();
-
-    var mininterest = document.querySelectorAll("[name=mininterest]");
-
-    var count = 0,
-        interests = [];
-
-    for (var i = 0; i < mininterest.length; i++) {
-
-        if (mininterest[i].checked) {
-            count++;
-            interests.push(mininterest[i].value);
-        }
-
-    }
-
-    //This is meant to mimic where you would make a fetch POST call
-    if (count > 1) {
-
-        addToLog("enough interests selected: " + interests);
-
-    } else {
-
-        addToLog("**NOT ENOUGH** interests selected: " + interests);
-
-    }
-
-    return false;
-
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
 }
 
- function bindStateChanges(){
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
 
-    var interests = document.querySelectorAll("[name=interest");
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
 
-    for (var index = 0; index < interests.length; index++) {
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
 
-        interests[index].addEventListener("change", function(evt){
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
 
-            var checkbox = evt.target;
-
-            addToLog(checkbox.value + " changed to " + checkbox.checked);
-
-        });
-
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
     }
-
+  }
 }
