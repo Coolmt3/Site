@@ -8,7 +8,7 @@ div1 {
 }
 
 div2 {
-  margin-top: 0px;
+  margin-top: 100px;
 }
 
 .image-section {
@@ -201,3 +201,16 @@ img.resize {
 .sticky + .content {
   padding-top: 50px;
 }
+
+.checkbox-container{
+  margin: 10px 5px;
+}
+
+.checkbox-container div{
+  margin-bottom: 5px;
+}
+
+.checkbox-container button{
+  margin-top: 5px;
+}
+
