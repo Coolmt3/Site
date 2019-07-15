@@ -27,18 +27,67 @@ function myFunction() {
   }
 }
 
-var checkboxValues = {};
-$(":checkbox").each(function(){
-  checkboxValues[this.id] = this.checked;
-});
-$.cookie('checkboxValues', checkboxValues, { expires: 7, path: '/' })
+var btnSubscribe = document.getElementById("btnSubmitSubscribe");
 
-function repopulateCheckboxes(){
-  var checkboxValues = $.cookie('checkboxValues');
-  if(checkboxValues){
-    Object.keys(checkboxValues).forEach(function(element) {
-      var checked = checkboxValues[element];
-      $("#" + element).prop('checked', checked);
+    btnSubscribe.addEventListener("click", function (evt) {
+
+        evt.preventDefault();
+
+        var subscribe = document.querySelector("[name=subscribe]");
+
+        console.log(subscribe.value); //writes 'newsletter'
+
+        return false;
+
     });
-  }
+	
+function validateInterest(evt) {
+
+    evt.preventDefault();
+
+    var mininterest = document.querySelectorAll("[name=mininterest]");
+
+    var count = 0,
+        interests = [];
+
+    for (var i = 0; i < mininterest.length; i++) {
+
+        if (mininterest[i].checked) {
+            count++;
+            interests.push(mininterest[i].value);
+        }
+
+    }
+
+    //This is meant to mimic where you would make a fetch POST call
+    if (count > 1) {
+
+        addToLog("enough interests selected: " + interests);
+
+    } else {
+
+        addToLog("**NOT ENOUGH** interests selected: " + interests);
+
+    }
+
+    return false;
+
+}
+
+ function bindStateChanges(){
+
+    var interests = document.querySelectorAll("[name=interest");
+
+    for (var index = 0; index < interests.length; index++) {
+
+        interests[index].addEventListener("change", function(evt){
+
+            var checkbox = evt.target;
+
+            addToLog(checkbox.value + " changed to " + checkbox.checked);
+
+        });
+
+    }
+
 }
