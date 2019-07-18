@@ -253,7 +253,7 @@ ul li:hover {
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
-  background: #888;
+  background: black;
   color: #fff;
   text-decoration: line-through;
 }
@@ -287,7 +287,7 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  background-color: #f44336;
+  background-color: #7242f5;
   padding: 30px 40px;
   color: white;
   text-align: center;
