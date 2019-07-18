@@ -286,7 +286,7 @@ ul li.checked::before {
 }
 
 /* Style the header */
-.header {
+.headerList{
   background-color: #7242f5;
   padding: 30px 40px;
   color: white;
@@ -294,7 +294,7 @@ ul li.checked::before {
 }
 
 /* Clear floats after the header */
-.header:after {
+.headerList:after {
   content: "";
   display: table;
   clear: both;
