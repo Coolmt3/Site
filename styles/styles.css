@@ -51,10 +51,12 @@ a:hover {
 
 div1 {
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 div2 {
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 /* width */
@@ -203,6 +205,7 @@ background: lightblue;
 img.resize {
   max-width:70%;
   max-height:70%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
 }
 
 img.resize2 {
